@@ -1,4 +1,4 @@
-/* Andrew Mcdaniel, Lab 3 Computer Science, 
+/* Andrew Mcdaniel, Lab 3 Computer Science, 9/22/26
 The purpous of this program is to find the mean and population standred deviation of four numbers from two diffrent sorces the conslole and a input file.
 the two sets of four numbers are then put into calculations then the results are put out to two diffrent locations the numbers you imput through the console are outputed to the consle
 the set of numbers inputed from the file ore outputed to a diffrent file */
@@ -48,19 +48,19 @@ int main()
 	infile.open("inMeanStd.dat");
 
 	int tempInputA, tempInputB, tempInputC, tempInputD;
-	infile >> tempInputA;
-	infile >> tempInputB;
-	infile >> tempInputC;
-	infile >> tempInputD;
+	infile >> a;
+	infile >> b;
+	infile >> c;
+	infile >> d;
 
 
-	// sends the results of the file mean and population standered deviation to the out file. //
+	// sends the results of the file mean and population standered deviation to the outfile. //
 	std::ofstream outfile;
 
 	outfile.open("outMeanStd.dat");
-	outfile << "the mean of " << fileMean(tempInputA, tempInputB, tempInputC, tempInputD);
+	outfile << "the mean of " << mean(a,b,c,d);
 
-	outfile << " and the deviation of " << filePopDev(tempInputA, tempInputB, tempInputC, tempInputD);
+	outfile << " and the population standard deviation of " << popStandDeviation(a,b,c,d);
 
 
 	return 0;
@@ -69,32 +69,13 @@ int main()
 // the calculation for the mean of the four numbers you input the the screen //
 float mean(int a, int b, int c, int d)
 {
-	a;
-	b;
-	c;
-	d;
 	return (a + b + c + d) / 4.0;
-}
 
-// the calculation for the mena of the four numbers in the input file //
-float fileMean(int tempInputA, int tempInputB, int tempInputC, int tempInputD)
-{
-	return ((tempInputA + tempInputB + tempInputC + tempInputD) /4.0);
 }
 
 // the calculation for the population standard deviation of the four numbers inputed through the screen. //
 float popStandDeviation(int a, int b, int c, int d)
 {
-	a;
-	b;
-	c;
-	d;
 	float e = mean(a, b, c, d);
 	return std::sqrt( ((a - e) * (a - e) + (b - e) * (b - e) + (c - e) * (c - e) + (d - e) * (d - e)) / 4);
-}
-
-// the calculation for the population standard deviation of the four numbers inputed through the input file. //
-float filePopDev(int tempInputA, int tempInputB, int tempInputC, int tempInputD)
-{
-	return std::sqrt( ((tempInputA - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) * (tempInputA - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) + (tempInputB - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) * (tempInputB - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) + (tempInputC - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) * (tempInputC - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) + (tempInputD - fileMean(tempInputA, tempInputB, tempInputC, tempInputD)) * (tempInputD - fileMean(tempInputA, tempInputB, tempInputC, tempInputD))) /4);
 }
