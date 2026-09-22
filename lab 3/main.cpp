@@ -11,14 +11,12 @@ the set of numbers inputed from the file ore outputed to a diffrent file */
 // the prototypes for both the console and the file calculations of mean. //
 
 float mean(int a, int b, int c, int d);
-float fileMean(int tempInputA, int tempInputB, int tempInputC, int tempInputD);
 
 // the prototypes for both the console and the file calcuations of population standerd deviation. //
 
 float popStandDeviation(int a,int b, int c, int d);
-float filePopDev(int tempInputA, int tempInputB, int tempInputC,int tempInputD);
 
-// this program pulls the numbers form the file, ruins the calculations and out puts the results into a diffrent file, it also allows you to input four numbers and get the mean and population standerd deviation of the number //
+// this program runs the calculations for the numbers imputed then runs the calculations for the numbers in the file //
 
 int main()
 {
