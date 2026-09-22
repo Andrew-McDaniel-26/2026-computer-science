@@ -1,4 +1,0 @@
-﻿  main.cpp
-C:\Users\mcdan\source\repos\day 2\lab 3\main.cpp(76,25): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\mcdan\source\repos\day 2\lab 3\main.cpp(82,9): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  lab 3.vcxproj -> C:\Users\mcdan\source\repos\day 2\x64\Debug\lab 3.exe
