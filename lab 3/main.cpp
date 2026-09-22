@@ -14,7 +14,7 @@ float mean(int a, int b, int c, int d);
 
 // the prototypes for both the console and the file calcuations of population standerd deviation. //
 
-float popStandDeviation(int a,int b, int c, int d);
+float popStandDeviation(int a,int b, int c, int d, float e);
 
 // this program runs the calculations for the numbers imputed then runs the calculations for the numbers in the file //
 
@@ -39,13 +39,15 @@ int main()
 
 	// the out put for the four numbers that you input through the screen of the two calculations. //
 	std::cout << "the mean of " << a << " " << b << " " << c << " " << d << " is " << mean(a, b, c, d) << std::endl;
-	std::cout << "the population standered deviation of " << a << " " << b << " " << c << " " << d << " is " << popStandDeviation(a, b, c, d) << std::endl;
+
+	float e = mean(a, b, c, d);
+
+	std::cout << "the population standered deviation of " << a << " " << b << " " << c << " " << d << " is " << popStandDeviation(a, b, c, d, e) << std::endl;
 
 	// puls the numbers from the input file and assighns them a variable
 	std::ifstream infile;
 	infile.open("inMeanStd.dat");
 
-	int tempInputA, tempInputB, tempInputC, tempInputD;
 	infile >> a;
 	infile >> b;
 	infile >> c;
@@ -58,7 +60,7 @@ int main()
 	outfile.open("outMeanStd.dat");
 	outfile << "the mean of " << mean(a,b,c,d);
 
-	outfile << " and the population standard deviation of " << popStandDeviation(a,b,c,d);
+	outfile << " and the population standard deviation of " << popStandDeviation(a,b,c,d,e);
 
 
 	return 0;
@@ -68,12 +70,10 @@ int main()
 float mean(int a, int b, int c, int d)
 {
 	return (a + b + c + d) / 4.0;
-
 }
 
 // the calculation for the population standard deviation of the four numbers inputed through the screen. //
-float popStandDeviation(int a, int b, int c, int d)
+float popStandDeviation(int a, int b, int c, int d, float e)
 {
-	float e = mean(a, b, c, d);
 	return std::sqrt( ((a - e) * (a - e) + (b - e) * (b - e) + (c - e) * (c - e) + (d - e) * (d - e)) / 4);
 }
