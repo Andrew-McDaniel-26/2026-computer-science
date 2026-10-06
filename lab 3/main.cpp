@@ -62,6 +62,8 @@ int main()
 
 	outfile << " and the population standard deviation of " << popStandDeviation(a,b,c,d,e);
 
+	outfile.close();
+	infile.close();
 
 	return 0;
 }
